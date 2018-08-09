@@ -26,6 +26,10 @@ a:visited{
 
 }
 
+h1{
+  text-align: center;
+}
+
 .title{
   text-transform: uppercase;
 }
@@ -50,6 +54,24 @@ a:visited{
   border-radius: 4px;
   position: relative;
   padding: 1.8em;
+  overflow: scroll;
+}
+
+.content{
+  padding: 1em;
+}
+td{
+  display: block;
+  width: 100%;
+}
+td:nth-of-type(1){
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #005AA7;
+}
+th{
+  display: none;
+}
 }
 
 .paragraph{
@@ -104,7 +126,8 @@ a:visited{
   font-weight: bold;
   color: #005AA7;
   font-size: 1.2em;
-
+  margin-top: 1em;
+  display: inline-block;
 }
 
 .main-image{
@@ -116,8 +139,31 @@ a:visited{
 .position{
   background-color: #005AA7;
   color: white;
-  padding: 10px;
+  padding: 0.5em;
   border-radius: 4px;
   position: relative;
   margin-right: 0.5em;
+}
+
+@media(min-width:900px){
+  .content{
+    padding: 1.8em;
+  }
+  td{
+    display: table-cell;
+    width: auto;
+  }
+  td:nth-of-type(1){
+    font-size: 1em;
+  }
+  th{
+    display: table-cell;
+  }
+}
+
+
+@media(min-height:550px){
+  .content{
+    height: 500px;<
+  }
 }
